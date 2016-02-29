@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>
+        Order Book</h1>
+        <form ng-submit="orderbooks()">
+    <table class="table table-bordered">
+        <tr>
+            <td style="width:20%">
+                Books
+            </td>
+            <td>
+                Order
+            </td>
+        </tr>
+        <tr ng-repeat="book in books" >
+            <td>
+                {{book.name}}
+            </td>
+            <td>
+               <input type="checkbox" checklist-model="customer.books" checklist-value="book">
+            </td>
+        </tr>
+    </table>
+        <input type="submit"  value="Order Books" />
+   </form>
+</body>
+</html>

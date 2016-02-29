@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>
+        Profile</h1>
+    <form ng-submit="addprofile()" class="form-group">
+    FullName :
+   
+    <input type="type"  ng-model="customer.fullname" /><br />
+    Gender : 
+     <div class="form-group">
+        <div class="radio">
+            <label>
+                <input type="radio" name="radio" value="Male" ng-model="customer.gender">
+                Male
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="radio" value="Female" ng-model="customer.gender">
+                Female
+            </label>
+        </div>
+    </div>
+
+    <br />
+    Address:
+    <input type="text" ng-model="customer.address" />
+    <br />
+    Select State : 
+    <select ng-model="customer.state" ng-options="state.name as state.name for state in states">
+        <option value="">Select</option>
+    </select><br />
+        Select District : 
+    <select ng-model="customer.district" ng-options="district.name as district.name for  district in districts | filter : customer.state" ng-disabled="!customer.state">
+        <option value="">Select</option>
+    </select><br />
+        Select Taluka : 
+    <select ng-model="customer.taluka" ng-options="taluka.name as taluka.name for taluka in talukas | filter : customer.district" ng-disabled="!customer.district"">
+        <option value="">Select</option>
+    </select><br />
+    <input type="submit"  value="Update" />
+    </form>
+</body>
+</html>

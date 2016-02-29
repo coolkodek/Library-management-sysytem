@@ -1,0 +1,53 @@
+﻿<div>
+<br /> 
+
+
+<iframe width="500" height="500" scrolling="no" frameborder="0"  src="http://localhost/library/app/partials/pie.html"  ></iframe>
+ 
+
+
+    <table class="table table-bordered" ng-show="stateshow" >
+        <tr>
+            <th>State
+            </th>
+            <th>No of Customers
+            </th>
+        </tr>
+        <tr ng-repeat="s in statecount">
+            <td> <a href="#CustomerByLocation/state/{{s.name}}" >{{s.name}}</a>
+            </td>
+            <td>{{s.count}}
+            </td>
+        </tr>
+    </table>
+     <table class="table table-bordered" ng-show="districtshow">
+        <tr>
+            <th>District
+            </th>
+            <th>No of Customers
+            </th>
+        </tr>
+        <tr ng-repeat="s in districtcount">
+            <td> <a href="#CustomerByLocation/district/{{s.name}}" >{{s.name}}</a>
+            </td>
+            <td>{{s.count}}
+            </td>
+        </tr>
+    </table>
+      <table class="table table-bordered" ng-show="talukashow">
+        <tr>
+            <th>District
+            </th>
+            <th>No of Customers
+            </th>
+        </tr>
+        <tr ng-repeat="s in talukacount">
+            <td>{{s.name}}</a>
+            </td>
+            <td>{{s.count}}
+            </td>
+        </tr>
+    </table>
+
+
+ </div>

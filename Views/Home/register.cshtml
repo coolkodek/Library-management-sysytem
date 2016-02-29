@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "register";
+    Layout = "~/Views/Shared/Layoutangularlogin.cshtml";
+}
+<h2>
+    register</h2>
+<div ng-controller="registercontroller">
+    <form ng-submit="register()">
+     Full Name :
+    <input type="text" ng-model="user.fullname" />
+    <br />
+    UserName :
+    <input type="text" ng-model="user.username" />
+    <br />
+    Password :
+    <input type="text" ng-model="user.password" />
+    <br />
+    <input type="submit" value="Register" />
+    </form>
+</div>

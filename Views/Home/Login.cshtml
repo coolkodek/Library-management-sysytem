@@ -1,0 +1,26 @@
+﻿@{
+   
+    Layout = "~/Views/Shared/Layoutangularlogin.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <div ng-controller="logincontroller">
+            <form ng-submit="login()">
+            UserName :
+            <input type="text" ng-model="user.username" />
+            <br />
+            Password :
+            <input type="text" ng-model="user.password" />
+            <br />
+            <input type="submit" value="Login" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
